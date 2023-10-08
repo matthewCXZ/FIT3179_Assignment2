@@ -39,7 +39,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "../data/tourists_data.csv"},
+              "url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/tourists_data.csv"},
             "key": "country",
             "fields": ["tourists"]
           }
