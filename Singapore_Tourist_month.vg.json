@@ -4,7 +4,7 @@
   "width": 600,
   "height": 400,
   "data": {
-    "url": "https://rwa.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/tourists_month_data.csv"
+    "url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/tourists_month_data.csv"
   },
   "layer": [
     {
