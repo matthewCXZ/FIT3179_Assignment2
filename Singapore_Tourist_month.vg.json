@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Tourists visited Singapore from 2018 to 2023 by Month",
   "width": 500,
-  "height": 400,
+  "height": 350,
   "data": {
     "url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/tourists_month_data.csv"
   },
