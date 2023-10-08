@@ -3,7 +3,7 @@
   "title": "Hotel Occupany vs Tourists Arrival by Month",
   "width": 500,
   "height": 300,
-  "data": {"url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179-Homework10/main/hotel_occupancy_data.csv"},
+  "data": {"url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/hotel_occupancy_data.csv"},
   "transform": [
     {"filter": "datum.TotalVisitors > 0"},
     {"filter": "datum.HotelOccupancyRate > 0.0"}
