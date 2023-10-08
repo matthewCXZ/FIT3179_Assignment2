@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Tourists visited Singapore from 2018 to 2023 by Month",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "url": "../data/tourists_month_data.csv"
+  },
+  "layer": [
+    {
+      "mark": {"type": "line"},
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "ordinal",
+          "title": "Month",
+          "sort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          "axis": {"labelAngle": 0}
+        },
+        "y": {
+          "field": "tourists",
+          "type": "quantitative",
+          "title": "Tourist Arrivals"
+        },
+        "color": {
+         "field": "year",
+         "type": "nominal",
+          "title": "Year"
+        }
+      }
+    },
+    {
+      "mark": {"type": "point", "filled": true},
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "ordinal",
+          "title": "Month",
+          "sort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          "axis": {"labelAngle": 0}
+        },
+        "y": {
+          "field": "tourists", 
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "year",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {"field": "month", "type": "nominal", "title": "Month"},
+          {"field": "year", "type": "nominal", "title": "Year"},
+          {"field": "tourists", "type": "quantitative", "title": "Tourists"}
+        ]
+      }
+    }
+  ]
+}

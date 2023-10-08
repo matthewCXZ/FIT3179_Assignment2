@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Singapore Residents Travel Overseas by Month",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "../data/residents_travel_data.csv" 
+  },
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Month",
+      "type": "ordinal",
+      "title": "Month",
+      "sort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "axis": {"labelAngle": 0} 
+    },
+    "y": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
+      "sort": "descending" 
+    },
+    "color": {
+      "field": "Total",
+      "type": "quantitative",
+      "title": "No. of Residents",
+      "scale": {
+        "scheme": "lightorange" 
+      }
+    },
+    "tooltip": [
+      {"field": "Month", "type": "nominal", "title": "Month"},
+      {"field": "Year", "type": "nominal", "title": "Year"},
+      {"field": "Total", "type": "quantitative", "title": "Residents Travel"}
+    ]
+  }
+}

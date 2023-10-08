@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "International visitors breakdown by regions from 2011 to 2023",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "../data/tourists_region_data.csv"
+  },
+  "mark": {
+    "type": "bar",
+    "size": 20  
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {"labelAngle": 0} 
+    },
+    "y": {
+      "field": "Tourists",
+      "type": "quantitative",
+      "title": "Tourists"
+    },
+    "color": {
+      "field": "Region",
+      "type": "nominal",
+      "title": "Region"
+    },
+    "tooltip": [
+      {"field": "Year", "type": "ordinal", "title": "Year"},
+      {"field": "Region", "type":"nominal"},
+      {"field": "Tourists", "type": "quantitative", "title": "Tourists"}
+    ]
+  }
+}
