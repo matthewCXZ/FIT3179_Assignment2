@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Hotel Occupany vs Tourists Arrival by Month",
   "width": 500,
-  "height": 300,
+  "height": 400,
   "data": {"url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/hotel_occupancy_data.csv"},
   "transform": [
     {"filter": "datum.TotalVisitors > 0"},
