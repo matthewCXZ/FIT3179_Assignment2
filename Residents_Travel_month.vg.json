@@ -4,7 +4,7 @@
   "width": 500,
   "height": 300,
   "data": {
-    "url": "../data/residents_travel_data.csv" 
+    "url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/residents_travel_data.csv" 
   },
   "mark": "rect",
   "encoding": {
