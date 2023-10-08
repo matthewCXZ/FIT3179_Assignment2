@@ -4,7 +4,7 @@
   "width": 500,
   "height": 300,
   "data": {
-    "url": "../data/tourists_region_data.csv"
+    "url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/tourists_region_data.csv"
   },
   "mark": {
     "type": "bar",
