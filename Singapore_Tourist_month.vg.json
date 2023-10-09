@@ -54,7 +54,7 @@
         "tooltip": [
           {"field": "month", "type": "nominal", "title": "Month"},
           {"field": "year", "type": "nominal", "title": "Year"},
-          {"field": "tourists", "type": "quantitative", "title": "Tourists"}
+          {"field": "tourists", "type": "quantitative", "title": "Tourists", "format": ","}
         ]
       }
     }
