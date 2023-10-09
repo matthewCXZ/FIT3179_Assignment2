@@ -30,7 +30,7 @@
     "tooltip": [
       {"field": "Year", "type": "ordinal", "title": "Year"},
       {"field": "Region", "type":"nominal"},
-      {"field": "Tourists", "type": "quantitative", "title": "Tourists"}
+      {"field": "Tourists", "type": "quantitative", "title": "Tourists", "format": ","}
     ]
   }
 }
