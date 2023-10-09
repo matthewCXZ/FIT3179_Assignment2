@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "International visitors breakdown by regions from 2011 to 2023",
   "width": 340,
-  "height": 250,
+  "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/tourists_region_data.csv"
   },
