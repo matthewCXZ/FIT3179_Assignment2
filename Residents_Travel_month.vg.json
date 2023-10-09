@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Singapore Residents Travel Overseas by Month",
+  "title": "Singapore Residents Travel Overseas by Month (2011 - 2023)",
   "width": 400,
   "height": 250,
   "data": {
@@ -32,7 +32,7 @@
     "tooltip": [
       {"field": "Month", "type": "nominal", "title": "Month"},
       {"field": "Year", "type": "nominal", "title": "Year"},
-      {"field": "Total", "type": "quantitative", "title": "Residents Travel"}
+      {"field": "Total", "type": "quantitative", "title": "Residents Travel", "format": ","}
     ]
   }
 }
