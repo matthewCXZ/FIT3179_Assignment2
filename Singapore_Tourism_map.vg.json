@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Countries of Origin for Tourists Visiting Singapore",
-  "width": 300,
-  "height": 180,
+  "width": 320,
+  "height": 220,
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/ne_110m_admin_0_countries.topojson",
