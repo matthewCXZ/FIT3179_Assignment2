@@ -45,7 +45,11 @@
         },
         "color": {
           "field": "year",
-          "type": "nominal"
+          "type": "nominal",
+          "scale":{
+            "domain": ["2023","2022", "2021", "2020", "2019", "2018"],
+            "range": ["#9467BD", "#BCBD22", "#17BECF", "#E41A1C", "#FF7F0E", "#1F77B4"]
+          }
         },
         "tooltip": [
           {"field": "month", "type": "nominal", "title": "Month"},
