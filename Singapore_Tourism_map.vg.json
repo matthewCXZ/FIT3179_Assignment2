@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Countries of Origin for Tourists Visiting Singapore",
+  "title": "Countries of Origin for Tourists Visiting Singapore (Aug 2022 - Jul 2023)",
   "width": 400,
   "height": 250,
   "projection": {"type": "equalEarth"},
