@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "International visitors breakdown by regions from 2011 to 2023",
+  "title": "International visitors breakdown by regions (2011 - 2023)",
   "width": 400,
   "height": 250,
   "data": {
