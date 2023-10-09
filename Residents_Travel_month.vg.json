@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Singapore Residents Travel Overseas by Month (2011 - 2023)",
-  "width": 450,
-  "height": 290,
+  "width": 480,
+  "height": 320,
   "data": {
     "url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/residents_travel_data.csv" 
   },
