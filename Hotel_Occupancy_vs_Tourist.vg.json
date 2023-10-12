@@ -32,7 +32,7 @@
       "type": "nominal",
       "scale":{
         "domain": ["2023","2022", "2021", "2020", "2019", "2018"],
-        "range": ["#9467BD", "#BCBD22", "#17BECF", "#E41A1C", "#FF7F0E", "#1F77B4"]
+        "range": ["#9467BD", "#BD9E39", "#17BECF", "#E41A1C", "#FF7F0E", "#1F77B4"]
       }
     },
     "opacity" : {"condition" : { "selection" : "yearSelector" , "value" : 0.7 }, "value" : 0.0},
