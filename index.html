@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Multiple Visualisations | An Example</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+			
+		<!-- Google font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+		<!-- CSS file -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
+	</head>
+
+	<body>
+
+		<div class="page">
+
+			<!-- pure grid group -->
+			<div class="vis-g">
+				<h1 class="vis-h1">Singapore Tourism Insights: A Multifaceted Journey</h1>
+			</div>
+			<!-- end pure grid group -->
+
+			<!-- pure grid group -->
+			<div class="vis-g">
+				<div class="vis-u">
+					<div class="description description-left">
+						<p class="description_p" style="margin: 10px;">
+							On this page, you can gain some insights on Singapore Tourism from the data visualizations presented<br> 
+							below. The number of international visitors traveling to Singapore has been increasing steadily over<br> 
+							the last few decades until year 2019 where the COVID-19 pandemic hits the world. The tourists has <br>
+							dropped tremendously for 2 years and only started to recover in Mar 2022. <br><br>
+							Note: Data of the international visitors include only those by Air and Sea, and not those by Land.
+						</p>
+					</div>
+				</div>
+				<div class="vis-u">
+					<div id="vis1" class="vis-container">
+					</div>
+					<div class="vis-detail">
+						From this chart, it shows that Singapore received the most tourists in year 2018 and 2019. 
+						The number of tourists hit as high as 1.8 mil per month.<br><br>
+						In 2020, the number of tourist plunged to the lowest point and only start to recover 
+						from Mar 2022. Until today, the number of visitors has not reached the previous peak.
+						
+					</div>
+				</div>
+				<div class="vis-u">
+					<div id="vis2" class="vis-container">
+					</div>
+					<div class="vis-detail">
+						The Choropleth map shows the quantity of international visitors by
+							country arriving in
+							Singapore from Aug 2022 to Jul 2023. We see that Indonesia tourists are the largest group of visitors in Singapore, 
+							follow by India, Malaysia, Australia, China, Philipines and United States of America. 
+					</div>
+				</div>
+			</div>
+			<!-- end pure grid group -->
+
+			<br>
+			<br>
+
+			<!-- pure grid group -->
+			<div class="vis-g">
+				<div class="vis-u">
+					<div id="vis3" class="vis-container">
+					</div>
+					<div class="vis-detail">
+						The stacked bar chart shows the breakdown of international visitors by region. SouthEast Asia took the top 
+						ranked every year. Greater China took the second position and follow by Europe.
+					</div>
+				</div>
+				<div class="vis-u">
+					<div id="vis4" class="vis-container">
+					</div>
+					<div class="vis-detail">
+						The scatterplot shows the relationship between the hotel occupancy and the number of visitors over the last six years.
+						One would have expected that when the number of tourists is high, hotel occupancy should be high and when the number of 
+						tourists is low, the hotel occupancy should be low. But during COVID-19 pandemic, the visitors were low, but the hotel occupancy 
+						is able to reach 40% to 80%. This is due to most hotels have closed many of the their rooms during the period.<br><br>
+						Note: Dots can be filtered by clicking on the legend.
+
+					</div>
+				</div>
+				<div class="vis-u">
+					<div id="vis5" class="vis-container">
+					</div>
+					<div class="vis-detail">
+						Finally, let us look at the pattern of Singaporeans travelling overseas on a heatmap. As expected, during the
+						pandemic years, very few Singaporeans travel overseas. Besides that, it also shows many Singaporeans travelling
+						in the months of Mar, Jun, Nov and Dec every year. This is because those are the months of Singapore school holidays. 
+						Many families travel overseas during these few months.
+				
+					</div>
+				</div>
+
+			</div>
+			<!-- end pure grid group -->
+
+		</div> <!-- end page -->
+
+		<script type="text/javascript">
+			var specVis1 = "./Singapore_Tourist_month.vg.json";
+			var specVis2 = "./Singapore_Tourism_map.vg.json";
+			var specVis3 = "./Tourist_region_year.vg.json";
+			var specVis4 = "./Hotel_Occupancy_vs_Tourist.vg.json";
+			var specVis5 = "./Residents_Travel_month.vg.json";
+
+			vegaEmbed('#vis1', specVis1, {
+				"actions": false
+			}).then(function(result) {
+				// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+			}).catch(console.error);
+
+			vegaEmbed('#vis2', specVis2, {
+				"actions": false
+			}).then(function(result) {
+				// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+			}).catch(console.error);
+
+			vegaEmbed('#vis3', specVis3, {
+				"actions": false
+			}).then(function(result) {
+				// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+			}).catch(console.error);
+
+			vegaEmbed('#vis4', specVis4, {
+				"actions": false
+			}).then(function(result) {
+				// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+			}).catch(console.error);
+
+			vegaEmbed('#vis5', specVis5, {
+				"actions": false
+			}).then(function(result) {
+				// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+			}).catch(console.error);
+		</script>
+	</body>
+
+</html>
