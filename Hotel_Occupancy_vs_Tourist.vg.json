@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Hotel Occupany vs Tourists Arrival by Month (2018 - 2023)", "fontSize": 16},
+  "width": 700,
+  "height": 400,
+  "data": {"url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/hotel_occupancy_data.csv"},
+  "transform": [
+    {"filter": "datum.TotalVisitors > 0"},
+    {"filter": "datum.HotelOccupancyRate > 0.0"}
+  ],
+  "selection": {
+    "yearSelector": {
+      "type": "multi",
+      "fields": ["Year"],
+      "bind": "legend"
+    }
+  },
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "TotalVisitors",
+      "type": "quantitative",
+      "title": "Number of Tourist Arrivals"
+    },
+    "y": {
+      "field": "HotelOccupancyRate",
+      "type": "quantitative",
+      "title": "Hotel Occupancy Percentage"
+    },
+    "color": {
+      "field": "Year",
+      "type": "nominal",
+      "scale":{
+        "domain": ["2023","2022", "2021", "2020", "2019", "2018"],
+        "range": ["#9467BD", "#BD9E39", "#17BECF", "#E41A1C", "#FF7F0E", "#1F77B4"]
+      }
+    },
+    "opacity" : {"condition" : { "selection" : "yearSelector" , "value" : 0.7 }, "value" : 0.0},
+    "tooltip": [
+      {"field": "Month", "type": "nominal", "title": "Month"},
+      {"field": "Year", "type": "nominal", "title": "Year"},
+      {"field": "TotalVisitors", "type": "quantitative", "title": "Tourist Arrivals", "format": ","},
+      {"field": "HotelOccupancyRate", "type": "quantitative", "title": "Hotel Occupancy %", "format": ".1f"}
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Tourists visited Singapore by Month (2018 - 2023)", "fontSize": 16},
+  "width": 700,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/tourists_month_data.csv"
+  },
+  "layer": [
+    {
+      "selection": {
+        "yearSelector": {
+          "type": "multi",
+          "fields": ["year"],
+          "bind": "legend"
+        }
+      },
+      "mark": {"type": "line"},
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "ordinal",
+          "title": "Month",
+          "sort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          "axis": {"labelAngle": 0}
+        },
+        "y": {
+          "field": "tourists",
+          "type": "quantitative",
+          "title": "Tourist Arrivals"
+        },
+        "color": {
+         "field": "year",
+         "type": "nominal",
+          "title": "Year"
+        },
+        "opacity" : {"condition" : { "selection" : "yearSelector" , "value" : 0.7 }, "value" : 0.0}
+      }
+    },
+    {
+      "mark": {"type": "point", "filled": true},
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "ordinal",
+          "title": "Month",
+          "sort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          "axis": {"labelAngle": 0}
+        },
+        "y": {
+          "field": "tourists", 
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "year",
+          "type": "nominal",
+          "scale":{
+            "domain": ["2023","2022", "2021", "2020", "2019", "2018"],
+            "range": ["#9467BD", "#BD9E39", "#17BECF", "#E41A1C", "#FF7F0E", "#1F77B4"]
+          }
+        },
+        "opacity" : {"condition" : { "selection" : "yearSelector" , "value" : 0.7 }, "value" : 0.0},
+        "tooltip": [
+          {"field": "month", "type": "nominal", "title": "Month"},
+          {"field": "year", "type": "nominal", "title": "Year"},
+          {"field": "tourists", "type": "quantitative", "title": "Tourists", "format": ","}
+        ]
+      }
+    }
+  ]
+}
