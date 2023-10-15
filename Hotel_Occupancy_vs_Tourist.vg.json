@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Hotel Occupany vs Tourists Arrival by Month (2018 - 2023)", "fontSize": 16},
+  "title": {"text": "Hotel Occupancy vs Tourists Arrival by Month (2018 - 2023)", "fontSize": 16},
   "width": 700,
   "height": 400,
   "data": {"url": "https://raw.githubusercontent.com/matthewCXZ/FIT3179_Assignment2/main/hotel_occupancy_data.csv"},
